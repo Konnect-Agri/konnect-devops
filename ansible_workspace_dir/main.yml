@@ -12,6 +12,8 @@
       tags: [deploy-mock-bank-ui]
     - role: deploy-konnect-playground
       tags: [deploy-konnect-playground]
+    - role: deploy-konnect-docs
+      tags: [deploy-konnect-docs]  
     - role: stack-proxy
       tags: [stack-proxy]
     

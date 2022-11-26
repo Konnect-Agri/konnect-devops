@@ -18,18 +18,38 @@ network_alias_mock_bank_ui_service: mock_bank_ui_service
 image_mock_bank_ui_service: mock-bank-ui
 mock_bank_ui_logs: /mydata/logs/agridex-playground
 force_reload_mock_bank_ui_service: true
-mock_bank_ui_secret_path: kv/data/konnect/agridex-playground
+mock_bank_ui_secret_path: kv/data/konnect/mock-bank-ui
 service_replicas_mock_bank_ui_service: 1
 
 service_konnect_playground_service: konnect_playground_service
-service_konnect_playground_host_port: 3001
+service_konnect_playground_host_port: 3002
 service_konnect_playground_docker_port: 3000
 network_alias_konnect_playground_service: konnect_playground_service
-image_konnect_playground_service: mock-bank-ui
+image_konnect_playground_service: konnect-playground-service
 konnect_playground_logs: /mydata/logs/agridex-playground
 force_reload_konnect_playground_service: true
-konnect_playground_secret_path: kv/data/konnect/agridex-playground
+konnect_playground_secret_path: kv/data/konnect/konnect-playground
 service_replicas_konnect_playground_service: 1
+
+service_konnect_docs_service: konnect_docs_service
+service_konnect_docs_host_port: 3003
+service_konnect_docs_docker_port: 3000
+network_alias_konnect_docs_service: konnect_docs_service
+image_konnect_docs_service: mock-bank-ui
+konnect_docs_logs: /mydata/logs/agridex-playground
+force_reload_konnect_docs_service: true
+konnect_docs_secret_path: kv/data/konnect/konnect-docs
+service_replicas_konnect_docs_service: 1
+
+service_resolver_service: resolver_service
+service_resolver_host_port: 3004
+service_resolver_docker_port: 3000
+network_alias_resolver_service: resolver_service
+image_resolver_service: mock-bank-ui
+resolver_logs: /mydata/logs/agridex-playground
+force_reload_resolver_service: true
+resolver_secret_path: kv/data/konnect/resolver
+service_replicas_resolver_service: 1
 
 VAULT_TOKEN: #VAULT TOKEN
 VAULT_ADDR: #VAULT ADDR
