@@ -45,7 +45,7 @@ service_resolver_service: resolver_service
 service_resolver_host_port: 3004
 service_resolver_docker_port: 3000
 network_alias_resolver_service: resolver_service
-image_resolver_service: mock-bank-ui
+image_resolver_service: resolver
 resolver_logs: /mydata/logs/agridex-playground
 force_reload_resolver_service: true
 resolver_secret_path: kv/data/konnect/resolver
