@@ -10,6 +10,8 @@
       tags: [deploy-agridex-playground]
     - role: deploy-mock-bank-ui
       tags: [deploy-mock-bank-ui]
+    - role: deploy-konnect-playground
+      tags: [deploy-konnect-playground]
     - role: stack-proxy
       tags: [stack-proxy]
     
