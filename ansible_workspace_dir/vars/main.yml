@@ -1,0 +1,15 @@
+---
+# Update variables for each service here
+
+service_argidex_playground_service: argidex_playground_service
+service_agridex_playground_host_port: 3000
+service_agridex_playground_docker_port: 3000
+network_alias_agridex_playground_service: agridex-playground-service
+image_agridex_playground_service: agridex-playground
+agridex_playground_logs: /mydata/logs/agridex-playground
+force_reload_esmawad_backend_service: true
+esamwad_secret_path: kv/data/konnect/agridex-playground
+
+
+VAULT_TOKEN: #VAULT TOKEN
+VAULT_ADDR: #VAULT ADDR
