@@ -13,9 +13,17 @@
     - role: deploy-konnect-playground
       tags: [deploy-konnect-playground]
     - role: deploy-konnect-docs
+<<<<<<< Updated upstream
       tags: [deploy-konnect-docs] 
     - role: deploy-resolver
       tags: [deploy-resolver]  
+=======
+      tags: [deploy-konnect-docs]  
+    - role: deploy-resolver
+      tags: [deploy-resolver]  
+    - role: deploy-gatekeeper
+      tags: [deploy-gatekeeper]
+>>>>>>> Stashed changes
     - role: stack-proxy
       tags: [stack-proxy]
     

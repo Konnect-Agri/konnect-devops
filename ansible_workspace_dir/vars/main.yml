@@ -51,5 +51,16 @@ force_reload_resolver_service: true
 resolver_secret_path: kv/data/konnect/resolver
 service_replicas_resolver_service: 1
 
+service_gatekeeper_service: gatekeeper_service
+service_gatekeeper_host_port: 3005
+service_gatekeeper_docker_port: 3000
+network_alias_gatekeeper_service: gatekeeper_service
+image_gatekeeper_service: gatekeeper
+gatekeeper_logs: /mydata/logs/agridex-playground
+force_reload_gatekeeper_service: true
+gatekeeper_secret_path: kv/data/konnect/gatekeeper
+service_replicas_gatekeeper_service: 1
+
+
 VAULT_TOKEN: #VAULT TOKEN
 VAULT_ADDR: #VAULT ADDR
