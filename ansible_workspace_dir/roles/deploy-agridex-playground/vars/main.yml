@@ -14,13 +14,13 @@ docker_port: "{{ service_agridex_playground_docker_port }}"
 host_port: "{{ service_agridex_playground_host_port }}"
 image_name: "{{ image_agridex_playground_service }}"
 tag: "{{ tags_agridex_playground_service }}"
-replicas: "{{ service_replicas_esmawad_backend_service }}"
+replicas: "{{ service_replicas_agridex_playground_service }}"
 network_alias_name: "{{ network_alias_agridex_playground_service }}"
-docker_service_stack_name: samarth
+docker_service_stack_name: konnect
 docker_service_name: "{{ service_agridex_playground_service }}"
-force_reload: "{{ force_reload_esmawad_backend_service }}"
+force_reload: "{{ force_reload_agridex_playground_service }}"
 host_logs_location: "{{ agridex_playground_logs }}"
 docker_logs_location: /logs
 
 # Your credentials on the vault
-credentials: "{{ lookup('hashi_vault', 'secret={{ esamwad_secret_path }}', url=VAULT_ADDR, token=VAULT_TOKEN) }}"
+# credentials: "{{ lookup('hashi_vault', 'secret={{ esamwad_secret_path }}', url=VAULT_ADDR, token=VAULT_TOKEN) }}"
