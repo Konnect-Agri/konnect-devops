@@ -25,7 +25,7 @@ service_konnect_playground_service: konnect_playground_service
 service_konnect_playground_host_port: 3002
 service_konnect_playground_docker_port: 3000
 network_alias_konnect_playground_service: konnect_playground_service
-image_konnect_playground_service: konnect-playground-service
+image_konnect_playground_service: konnect-playground
 konnect_playground_logs: /mydata/logs/agridex-playground
 force_reload_konnect_playground_service: true
 konnect_playground_secret_path: kv/data/konnect/konnect-playground
