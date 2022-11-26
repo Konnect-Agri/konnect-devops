@@ -8,4 +8,6 @@
   roles:
     - role: deploy-agridex-playground
       tags: [deploy-agridex-playground]
+    - role: stack-proxy
+      tags: [stack-proxy]
     

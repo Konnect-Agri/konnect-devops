@@ -22,11 +22,9 @@
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
-pwd
-ls
-sudo cp commit_id.txt /home/techsavvyash/sweatAndBlood/samagra/Konnect/konnect-devops/ansible_workspace_dir
-cd /home/techsavvyash/sweatAndBlood/samagra/Konnect/konnect-devops/ansible_workspace_dir
-ansible-playbook -i inventory/hosts --extra-vars  &quot;tag=`cat commit_id.txt`  deploy_host_name=dev&quot; main.yml --tag deploy-agridex-playground-service
+sudo cp commit_id.txt /home/konnect-devops/ansible_workspace_dir
+cd /home/konnect-devops/ansible_workspace_dir
+ansible-playbook -i inventory/hosts --extra-vars  &quot;tag=`cat commit_id.txt`  deploy_host_name=dev&quot; main.yml --tag deploy-agridex-playground
 sudo rm commit_id.txt</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
