@@ -13,7 +13,9 @@
     - role: deploy-konnect-playground
       tags: [deploy-konnect-playground]
     - role: deploy-konnect-docs
-      tags: [deploy-konnect-docs]  
+      tags: [deploy-konnect-docs] 
+    - role: deploy-resolver
+      tags: [deploy-resolver]  
     - role: stack-proxy
       tags: [stack-proxy]
     

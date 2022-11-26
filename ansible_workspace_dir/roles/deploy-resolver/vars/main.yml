@@ -3,23 +3,23 @@
 # For script
 template_compose_file_name: compose-file.j2
 template_env_file_name: env.j2
-compose_file_name: "{{ service_resovler_service }}.yml"
-env_file_name: "{{ service_resovler_service }}.env"
+compose_file_name: "{{ service_resolver_service }}.yml"
+env_file_name: "{{ service_resolver_service }}.env"
 compose_file_deployment_location: "{{ compose_files_dir }}/{{ compose_file_name }}"
 env_file_deployment_location: "{{ env_files_dir }}/{{ env_file_name }}"
 user_friendly_name: resolver
 
 
-docker_port: "{{ service_resovler_docker_port }}"
-host_port: "{{ service_resovler_host_port }}"
-image_name: "{{ image_resovler_service }}"
-tag: "{{ tags_resovler_service }}"
-replicas: "{{ service_replicas_resovler_service }}"
-network_alias_name: "{{ network_alias_resovler_service }}"
+docker_port: "{{ service_resolver_docker_port }}"
+host_port: "{{ service_resolver_host_port }}"
+image_name: "{{ image_resolver_service }}"
+tag: "{{ tags_resolver_service }}"
+replicas: "{{ service_replicas_resolver_service }}"
+network_alias_name: "{{ network_alias_resolver_service }}"
 docker_service_stack_name: konnect
-docker_service_name: "{{ service_resovler_service }}"
-force_reload: "{{ force_reload_resovler_service }}"
-host_logs_location: "{{ resovler_logs }}"
+docker_service_name: "{{ service_resolver_service }}"
+force_reload: "{{ force_reload_resolver_service }}"
+host_logs_location: "{{ resolver_logs }}"
 docker_logs_location: /logs
 
 # Your credentials on the vault
