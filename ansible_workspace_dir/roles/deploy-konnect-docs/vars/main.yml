@@ -1,0 +1,26 @@
+---
+# vars file for deploy-sb-ext
+# For script
+template_compose_file_name: compose-file.j2
+template_env_file_name: env.j2
+compose_file_name: "{{ service_konnect_docs_service }}.yml"
+env_file_name: "{{ service_konnect_docs_service }}.env"
+compose_file_deployment_location: "{{ compose_files_dir }}/{{ compose_file_name }}"
+env_file_deployment_location: "{{ env_files_dir }}/{{ env_file_name }}"
+user_friendly_name: konnect-playground
+
+
+docker_port: "{{ service_konnect_docs_docker_port }}"
+host_port: "{{ service_konnect_docs_host_port }}"
+image_name: "{{ image_konnect_docs_service }}"
+tag: "{{ tags_konnect_docs_service }}"
+replicas: "{{ service_replicas_konnect_docs_service }}"
+network_alias_name: "{{ network_alias_konnect_docs_service }}"
+docker_service_stack_name: konnect
+docker_service_name: "{{ service_konnect_docs_service }}"
+force_reload: "{{ force_reload_konnect_docs_service }}"
+host_logs_location: "{{ konnect_docs_logs }}"
+docker_logs_location: /logs
+
+# Your credentials on the vault
+# credentials: "{{ lookup('hashi_vault', 'secret={{ esamwad_secret_path }}', url=VAULT_ADDR, token=VAULT_TOKEN) }}"
