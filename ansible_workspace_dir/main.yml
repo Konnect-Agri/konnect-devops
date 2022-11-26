@@ -8,6 +8,8 @@
   roles:
     - role: deploy-agridex-playground
       tags: [deploy-agridex-playground]
+    - role: deploy-mock-bank-ui
+      tags: [deploy-mock-bank-ui]
     - role: stack-proxy
       tags: [stack-proxy]
     
