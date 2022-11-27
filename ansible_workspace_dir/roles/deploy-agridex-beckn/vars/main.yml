@@ -1,0 +1,26 @@
+---
+# vars file for deploy-sb-ext
+# For script
+template_compose_file_name: compose-file.j2
+template_env_file_name: env.j2
+compose_file_name: "{{ service_agridex_beckn_service }}.yml"
+env_file_name: "{{ service_agridex_beckn_service }}.env"
+compose_file_deployment_location: "{{ compose_files_dir }}/{{ compose_file_name }}"
+env_file_deployment_location: "{{ env_files_dir }}/{{ env_file_name }}"
+user_friendly_name: agridex_beckn
+
+
+docker_port: "{{ service_agridex_beckn_docker_port }}"
+host_port: "{{ service_agridex_beckn_host_port }}"
+image_name: "{{ image_agridex_beckn_service }}"
+tag: "{{ tags_agridex_beckn_service }}"
+replicas: "{{ service_replicas_agridex_beckn_service }}"
+network_alias_name: "{{ network_alias_agridex_beckn_service }}"
+docker_service_stack_name: konnect
+docker_service_name: "{{ service_agridex_beckn_service }}"
+force_reload: "{{ force_reload_agridex_beckn_service }}"
+host_logs_location: "{{ agridex_beckn_logs }}"
+docker_logs_location: /logs
+
+# Your credentials on the vault
+credentials: "{{ lookup('hashi_vault', 'secret={{ agridex_beckn_secret_path }}', url=VAULT_ADDR, token=VAULT_TOKEN) }}"
