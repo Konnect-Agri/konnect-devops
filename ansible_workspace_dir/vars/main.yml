@@ -61,6 +61,23 @@ force_reload_gatekeeper_service: true
 gatekeeper_secret_path: kv/data/konnect/gatekeeper
 service_replicas_gatekeeper_service: 1
 
+service_agridex_beckn_service: agridex-beckn
+service_agridex_beckn_proxy_host_port: 3009
+service_agridex_beckn_proxy_docker_port: 3003
+service_agridex_beckn_bap_host_port: 3006
+service_agridex_beckn_bap_docker_port: 3000
+service_agridex_beckn_bg_host_port: 3007
+service_agridex_beckn_bg_docker_port: 3001
+service_agridex_beckn_bpp_host_port: 3008
+service_agridex_beckn_bpp_docker_port: 3002
+service_agridex_beckn_test_api_host_port: 3010
+service_agridex_beckn_test_api_docker_port: 3004
+network_alias_agridex_beckn_service: agridex-beckn_service
+image_agridex_beckn_service: agridex-beckn
+agridex_beckn_logs: /mydata/logs/agridex-playground
+force_reload_agridex_beckn_service: true
+agridex_beckn_secret_path: kv/data/konnect/agridex-beckn
+service_replicas_agridex_beckn_service: 1
 
-VAULT_TOKEN: #VAULT TOKEN
+VAULT_TOKEN: #VAULT TOKEN`
 VAULT_ADDR: #VAULT ADDR

@@ -1,22 +1,94 @@
 version: '3.7'
 
 services:
-  {{ docker_service_name }}:
-    image: {{ docker_hub_url }}/{{ image_name }}:{{ tag }}
+  {{ docker_service_name }}_proxy:
+    image: {{ docker_hub_url }}/{{ image_name }}-proxy:{{ tag }}
     hostname: "{{ docker_service_name }}"
     
     {% if publish_ports == true %}
 
     ports:
-      - {{ host_port }}:{{ docker_port }}
+      - {{ service_agridex_beckn_proxy_host_port }}:{{ service_agridex_beckn_proxy_docker_port }}
       
     {% endif %}
 
 
     expose:
-      - 3000
+      - {{ service_agridex_beckn_proxy_docker_port }}
+
+    env_file:
+      - {{ env_file_deployment_location }}
+      
+  {{ docker_service_name }}_bap:
+    image: {{ docker_hub_url }}/{{ image_name }}-bap:{{ tag }}
+    hostname: "{{ docker_service_name }}"
     
+    {% if publish_ports == true %}
+
+    ports:
+      - {{ service_agridex_beckn_bap_host_port }}:{{ service_agridex_beckn_bap_docker_port }}
+      
+    {% endif %}
+
+
+    expose:
+      - {{ service_agridex_beckn_bap_docker_port }}
+
+    env_file:
+      - {{ env_file_deployment_location }}
+
+
+  {{ docker_service_name }}_bg:
+    image: {{ docker_hub_url }}/{{ image_name }}-bg:{{ tag }}
+    hostname: "{{ docker_service_name }}"
     
+    {% if publish_ports == true %}
+
+    ports:
+      - {{ service_agridex_beckn_bg_host_port }}:{{ service_agridex_beckn_bg_docker_port }}
+      
+    {% endif %}
+
+
+    expose:
+      - {{ service_agridex_beckn_bg_docker_port }}
+
+    env_file:
+      - {{ env_file_deployment_location }}
+
+  {{ docker_service_name }}_bpp:
+    image: {{ docker_hub_url }}/{{ image_name }}-bpp:{{ tag }}
+    hostname: "{{ docker_service_name }}"
+    
+    {% if publish_ports == true %}
+
+    ports:
+      - {{ service_agridex_beckn_bpp_host_port }}:{{ service_agridex_beckn_bpp_docker_port }}
+      
+    {% endif %}
+
+
+    expose:
+      - {{ service_agridex_beckn_bpp_docker_port }}
+
+    env_file:
+      - {{ env_file_deployment_location }}
+  
+  {{ docker_service_name }}_test_api:
+    image: {{ docker_hub_url }}/{{ image_name }}-test-api:{{ tag }}
+    hostname: "{{ docker_service_name }}"
+    
+    {% if publish_ports == true %}
+
+    ports:
+      - {{ service_agridex_beckn_test_api_host_port }}:{{ service_agridex_beckn_test_api_docker_port }}
+      
+    {% endif %}
+
+
+    expose:
+      - {{ service_agridex_beckn_test_api_docker_port }}
+
     deploy:
       placement:
         constraints:

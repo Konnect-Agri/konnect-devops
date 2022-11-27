@@ -10,8 +10,6 @@ env_file_deployment_location: "{{ env_files_dir }}/{{ env_file_name }}"
 user_friendly_name: agridex_beckn
 
 
-docker_port: "{{ service_agridex_beckn_docker_port }}"
-host_port: "{{ service_agridex_beckn_host_port }}"
 image_name: "{{ image_agridex_beckn_service }}"
 tag: "{{ tags_agridex_beckn_service }}"
 replicas: "{{ service_replicas_agridex_beckn_service }}"
