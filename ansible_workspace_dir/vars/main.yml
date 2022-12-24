@@ -79,5 +79,14 @@ force_reload_agridex_beckn_service: true
 agridex_beckn_secret_path: kv/data/konnect/agridex-beckn
 service_replicas_agridex_beckn_service: 1
 
+service_fusion_auth_service: fusion-auth-service
+service_fusion_auth_host_port: 9011
+service_fusion_auth_docker_port: 9011
+network_alias_fusion_auth_service: fusion-auth-service
+image_fusion_auth_service: konnect-fusion-auth-service
+fusion_auth_logs: /mydata/logs/fusion-auth
+force_reload_fusion_auth_service: true
+fusion_auth_secret_path: kv/data/konnect/fusion-auth
+
 VAULT_TOKEN: #VAULT TOKEN`
 VAULT_ADDR: #VAULT ADDR

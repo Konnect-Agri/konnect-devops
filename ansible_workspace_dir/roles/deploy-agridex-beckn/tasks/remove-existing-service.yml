@@ -1,5 +1,9 @@
 ---
   - name: Removing the existing service {{  docker_service_stack_name  }}_{{ docker_service_name }}
-    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}
+    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}_proxy
+    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}_bap
+    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}_bg
+    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}_bpp
+    shell: docker service rm {{  docker_service_stack_name  }}_{{ docker_service_name }}_test_api
     when: "force_reload==true"
     ignore_errors: true

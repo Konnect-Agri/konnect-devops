@@ -22,4 +22,6 @@
       tags: [deploy-agridex-beckn]
     - role: stack-proxy
       tags: [stack-proxy]
+    - role: deploy-fusion-auth
+      tags: [deploy-fusion-auth]
     

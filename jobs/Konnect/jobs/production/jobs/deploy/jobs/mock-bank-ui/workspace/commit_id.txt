@@ -1,1 +1,1 @@
-mock-bank-ui_e7ab138_master
+mock-bank-ui_15fad3d_master
