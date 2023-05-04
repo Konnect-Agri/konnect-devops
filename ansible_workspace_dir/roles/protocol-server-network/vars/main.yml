@@ -1,0 +1,28 @@
+---
+# vars file for deploy-sb-ext
+# For script
+template_compose_file_name: compose-file.j2
+template_default_yaml_file_name: default.j2
+template_env_file_name: env.j2
+compose_file_name: "{{ service_protocol_server_network_service }}.yml"
+env_file_name: "{{ service_protocol_server_network_service }}.env"
+compose_file_deployment_location: "{{ compose_files_dir }}/{{ compose_file_name }}"
+env_file_deployment_location: "{{ env_files_dir }}/{{ env_file_name }}"
+user_friendly_name: protocol_server_network
+# default_yaml_deployment_location: TODO: For tushar
+
+
+docker_port: "{{ service_protocol_server_network_docker_port }}"
+host_port: "{{ service_protocol_server_network_host_port }}"
+image_name: "{{ image_protocol_server_network_service }}"
+tag: "{{ tags_protocol_server_network_service }}"
+replicas: "{{ service_replicas_protocol_server_network_service }}"
+network_alias_name: "{{ network_alias_protocol_server_network_service }}"
+docker_service_stack_name: konnect
+docker_service_name: "{{ service_protocol_server_network_service }}"
+force_reload: "{{ force_reload_protocol_server_network_service }}"
+host_logs_location: "{{ protocol_server_network_logs }}"
+docker_logs_location: /logs
+
+# Your credentials on the vault
+credentials: "{{ lookup('hashi_vault', 'secret={{ resolver_secret_path }}', url=VAULT_ADDR, token=VAULT_TOKEN) }}"
