@@ -90,3 +90,5 @@ fusion_auth_secret_path: kv/data/konnect/fusion-auth
 
 VAULT_TOKEN: #VAULT TOKEN`
 VAULT_ADDR: #VAULT ADDR
+VAULT_TOKEN: hvs.ttV4i46bD9rngBD6oI6fzCSn
+VAULT_ADDR: http://0.0.0.0:8200

@@ -13,7 +13,7 @@
             <org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl plugin="plain-credentials@139.ved2b_9cf7587b">
               <id>test</id>
               <description>test</description>
-              <secret>{AQAAABAAAAAQ6DcXwxu/BT8cJS1CKJpfsYVCGwFya6iuO4gpSMCHzm0=}</secret>
+              <secret>{AQAAABAAAABAX0GIHCXB50SAMaiaPptHXlfrINxFOzPvNesouIXZIIE5aq9OwU5laI7gUaj/YwB21+S5J96gRW7WuCCccpz47PdInhFv/xPUhGm36s6ErwA=}</secret>
             </org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl>
           </java.util.concurrent.CopyOnWriteArrayList>
         </entry>

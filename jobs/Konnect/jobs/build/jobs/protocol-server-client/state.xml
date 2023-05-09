@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.branch.MultiBranchProject_-State plugin="branch-api@2.1051.v9985666b_f6cc">
+  <sourceActions>
+    <entry>
+      <string>e2b40566-ca88-44f9-abaf-0d6c95b5b452</string>
+      <list>
+        <org.jenkinsci.plugins.github__branch__source.GitHubRepoMetadataAction plugin="github-branch-source@1696.v3a_7603564d04"/>
+        <jenkins.scm.api.metadata.ObjectMetadataAction plugin="scm-api@621.vda_a_b_055e58f7"/>
+        <org.jenkinsci.plugins.github__branch__source.GitHubLink plugin="github-branch-source@1696.v3a_7603564d04">
+          <iconClassName>icon-github-repo</iconClassName>
+          <url>https://github.com/Konnect-Agri/protocol-server-beckn</url>
+        </org.jenkinsci.plugins.github__branch__source.GitHubLink>
+        <org.jenkinsci.plugins.github__branch__source.GitHubDefaultBranch plugin="github-branch-source@1696.v3a_7603564d04">
+          <repoOwner>Konnect-Agri</repoOwner>
+          <repository>protocol-server-beckn</repository>
+          <defaultBranch>master</defaultBranch>
+        </org.jenkinsci.plugins.github__branch__source.GitHubDefaultBranch>
+      </list>
+    </entry>
+  </sourceActions>
+</jenkins.branch.MultiBranchProject_-State>
